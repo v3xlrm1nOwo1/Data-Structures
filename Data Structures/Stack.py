@@ -1,10 +1,16 @@
+""""
+============================Stack Data Structure=========================
+** A stack is a linear data structure that follows the principle of Last In First Out (LIFO).
+This means the last element inserted inside the stack is removed first.
+"""
+
 class Stack:
     def __init__(self, full):
         self.full = full
         self.list = list()
 
-    ##list is full
-    def Full(self):
+    #list is full
+    def full_stack(self):
         if len(self.list) == self.full:
             return f"List Is Full\nlist: {self.list}\ncount element are list: {self.full}"
         else:
@@ -24,5 +30,3 @@ class Stack:
             return f"I don't remove from this list: {self.list} "
         else:
             return f"remove this element: {self.list[-1]}, index: {self.list.index(self.list[-1])} from this list: {self.list}", self.list.pop()
-            
-            
